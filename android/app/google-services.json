@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "260571094003",
+    "project_id": "mobile-parkflow",
+    "storage_bucket": "mobile-parkflow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260571094003:android:fc1c640db76c0530a19086",
+        "android_client_info": {
+          "package_name": "com.example.parkflow_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "260571094003-2ekhh8tur0ttgjfhaldb1724ttcacctq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIsySO2Rx6ERxRMpXIU5hzRuJ88jQ4kUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "260571094003-2ekhh8tur0ttgjfhaldb1724ttcacctq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
