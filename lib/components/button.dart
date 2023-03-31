@@ -8,6 +8,7 @@ class CustomButton extends StatelessWidget {
     this.buttonHeight,
     this.buttonWidth,
     this.buttonMargin,
+    this.fontSize = 16,
   }) : super(key: key);
 
   final String buttonText;
@@ -15,6 +16,7 @@ class CustomButton extends StatelessWidget {
   final double? buttonHeight;
   final double? buttonWidth;
   final EdgeInsetsGeometry? buttonMargin;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +34,11 @@ class CustomButton extends StatelessWidget {
         child: Center(
           child: Text(
             buttonText,
-            style: const TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: fontSize,
+            ),
           ),
         ),
       ),
