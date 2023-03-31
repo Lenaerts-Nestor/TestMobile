@@ -5,14 +5,14 @@ import 'package:latlong2/latlong.dart';
 
 //error => naar hier [https://docs.fleaflet.dev/usage/basics ]
 //toekomst => https://pub.dev/packages/material_floating_search_bar,
-class MapMain extends StatefulWidget {
-  const MapMain({super.key});
+class MapBody extends StatefulWidget {
+  const MapBody({super.key});
 
   @override
-  State<MapMain> createState() => _MapMainState();
+  State<MapBody> createState() => _MapBodyState();
 }
 
-class _MapMainState extends State<MapMain> {
+class _MapBodyState extends State<MapBody> {
   bool shownavigationBar = false;
   @override
   Widget build(BuildContext context) {

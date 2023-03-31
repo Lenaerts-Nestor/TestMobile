@@ -17,7 +17,7 @@ class NavigationBarMain extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
             label: 'Map',
-          ),
+          ), 
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: 'Favorieten',

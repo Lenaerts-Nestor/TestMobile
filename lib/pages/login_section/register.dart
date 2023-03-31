@@ -103,7 +103,6 @@ class _RegisterState extends State<RegisterMain> {
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: ElevatedButton(
-                            //TODO: knop terug fixen, nog opzoeken
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               primary: Colors.transparent,

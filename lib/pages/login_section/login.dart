@@ -1,8 +1,10 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, library_prefixes
 
 import 'package:flutter/material.dart';
 import '../../components/textfield.dart' as textfield_style;
-import '../../components/button.dart' as CustomButton;
+import '../../components/button.dart' as customButton_style;
+import 'register.dart' as register_page;
+import '../map_section/map_main.dart' as map_page;
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginMain extends StatefulWidget {
@@ -113,14 +115,23 @@ class _LoginState extends State<LoginMain> {
                                   const SizedBox(
                                     height: 20,
                                   ),
-                                  CustomButton.CustomButton(
-                                      buttonText: 'Login',
-                                      buttonWidth: double.infinity,
-                                      buttonMargin: const EdgeInsets.fromLTRB(
-                                          20, 20, 30, 20)),
-                                  const SizedBox(
-                                    height: 12,
+                                  customButton_style.CustomButton(
+                                    buttonText: 'Login',
+                                    buttonWidth: double.infinity,
+                                    buttonMargin: const EdgeInsets.fromLTRB(
+                                        15, 20, 30, 20),
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                map_page.MapMain()),
+                                      );
+                                    },
                                   ),
+                                  // const SizedBox(
+                                  //   height: 1,
+                                  // ),
                                   Padding(
                                     padding:
                                         const EdgeInsets.fromLTRB(35, 0, 0, 0),
@@ -134,13 +145,20 @@ class _LoginState extends State<LoginMain> {
                                                   141, 141, 141, 1)),
                                         ),
                                         TextButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        register_page
+                                                            .RegisterMain()),
+                                              );
+                                            },
                                             child: Text(
                                               'Sign Up',
                                               style: GoogleFonts.poppins(
                                                   fontSize: 15,
-                                                  color: Color.fromRGBO(
-                                                      141, 141, 141, 1)),
+                                                  color: Colors.lightBlue),
                                             ))
                                       ],
                                     ),
