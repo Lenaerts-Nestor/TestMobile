@@ -12,9 +12,23 @@ class _PasswordResetPageState extends State<PasswordResetMain> {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      body: const Center(
-        child: Text('password page nog maken'),
-      ),
-    );
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        body: SafeArea(
+            child: Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Column(children: [Text('password file aanpassen')]),
+        )));
   }
 }
