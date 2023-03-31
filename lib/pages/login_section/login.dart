@@ -5,6 +5,7 @@ import '../../components/textfield.dart' as textfield_style;
 import '../../components/button.dart' as customButton_style;
 import 'register.dart' as register_page;
 import '../map_section/map_main.dart' as map_page;
+import './password-reset.dart' as passwrd_page;
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginMain extends StatefulWidget {
@@ -19,8 +20,7 @@ class _LoginState extends State<LoginMain> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor:
-            Colors.transparent, // Set the background color to transparent
+        backgroundColor: Colors.transparent,
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -51,8 +51,7 @@ class _LoginState extends State<LoginMain> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 100, 0,
-                      0), // Modify the padding to include the height of the Text widget
+                  padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
                   child: ListView(
                     physics: NeverScrollableScrollPhysics(),
                     children: [
@@ -92,7 +91,7 @@ class _LoginState extends State<LoginMain> {
                                     ),
                                   ),
                                   textfield_style.CustomTextField(
-                                    labelText: 'Parflow@gmail.com',
+                                    labelText: 'example@gmail.com',
                                     desiredPreIcon:
                                         const Icon(Icons.mail_outline),
                                   ),
@@ -112,8 +111,25 @@ class _LoginState extends State<LoginMain> {
                                     desiredPreIcon: const Icon(Icons.lock),
                                     obscureText: true,
                                   ),
-                                  const SizedBox(
-                                    height: 20,
+                                  Center(
+                                    child: TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    passwrd_page
+                                                        .PasswordResetMain()),
+                                          );
+                                        },
+                                        child: Text(
+                                          'Forgot Password?',
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 15,
+                                            color: Colors.lightBlue,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        )),
                                   ),
                                   customButton_style.CustomButton(
                                     buttonText: 'Login',
